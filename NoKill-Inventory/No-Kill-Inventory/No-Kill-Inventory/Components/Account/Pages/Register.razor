@@ -16,13 +16,13 @@
 @inject IdentityRedirectManager RedirectManager
 @using Microsoft.AspNetCore.Authorization
 
-@attribute [Authorize]
+@* @attribute [Authorize] *@
 
 <PageTitle>Register</PageTitle>
 
 @* Uncomment to lock registration behind login *@
-<AuthorizeView>
-    <Authorized>
+@* <AuthorizeView> *@
+@*     <Authorized> *@
         <h1>Add User</h1>
 
         <div class="row">
@@ -51,11 +51,11 @@
                 </EditForm>
             </div>
         </div>
-    </Authorized>
-    <NotAuthorized>
-
-    </NotAuthorized>
-</AuthorizeView>
+@*     </Authorized> *@
+@*     <NotAuthorized> *@
+@* *@
+@*     </NotAuthorized> *@
+@* </AuthorizeView> *@
 @code {
     private IEnumerable<IdentityError>? identityErrors;
 

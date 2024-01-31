@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HLE3e/Dr7PA4jZtV+8tsh8KMz/jTpzLeSpNGDfL5NIg=",
+  "Hash": "C9sc0a3J2A8nI6hsFFl0PEygJDtSbBqS4WEiVAQw3YI=",
   "Source": "No-Kill-Inventory",
   "BasePath": "_content/No-Kill-Inventory",
   "Mode": "Default",
@@ -8,19 +8,19 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "No-Kill-Inventory\\wwwroot",
+      "Name": "No-Kill-Inventory/wwwroot",
       "Source": "No-Kill-Inventory",
-      "ContentRoot": "C:\\Users\\Nic\\RiderProjects\\No-Kill-Louisville-Inventory-System-CapstoneF23\\NoKill-Inventory\\No-Kill-Inventory\\No-Kill-Inventory\\wwwroot\\",
+      "ContentRoot": "/Users/nicholasgathof/RiderProjects/No-Kill-Louisville-Inventory-System-CapstoneF23/NoKill-Inventory/No-Kill-Inventory/No-Kill-Inventory/wwwroot/",
       "BasePath": "_content/No-Kill-Inventory",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Nic\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.0\\staticwebassets\\AuthenticationService.js",
+      "Identity": "/Users/nicholasgathof/.nuget/packages/microsoft.aspnetcore.components.webassembly.authentication/8.0.0/staticwebassets/AuthenticationService.js",
       "SourceId": "Microsoft.AspNetCore.Components.WebAssembly.Authentication",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Nic\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.0\\staticwebassets\\",
+      "ContentRoot": "/Users/nicholasgathof/.nuget/packages/microsoft.aspnetcore.components.webassembly.authentication/8.0.0/staticwebassets/",
       "BasePath": "_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication",
       "RelativePath": "AuthenticationService.js",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Nic\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.0\\staticwebassets\\AuthenticationService.js"
+      "OriginalItemSpec": "/Users/nicholasgathof/.nuget/packages/microsoft.aspnetcore.components.webassembly.authentication/8.0.0/staticwebassets/AuthenticationService.js"
     },
     {
-      "Identity": "C:\\Users\\Nic\\RiderProjects\\No-Kill-Louisville-Inventory-System-CapstoneF23\\NoKill-Inventory\\No-Kill-Inventory\\No-Kill-Inventory\\obj\\Debug\\net8.0\\scopedcss\\bundle\\No-Kill-Inventory.styles.css",
+      "Identity": "/Users/nicholasgathof/RiderProjects/No-Kill-Louisville-Inventory-System-CapstoneF23/NoKill-Inventory/No-Kill-Inventory/No-Kill-Inventory/obj/Debug/net8.0/scopedcss/bundle/No-Kill-Inventory.styles.css",
       "SourceId": "No-Kill-Inventory",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Nic\\RiderProjects\\No-Kill-Louisville-Inventory-System-CapstoneF23\\NoKill-Inventory\\No-Kill-Inventory\\No-Kill-Inventory\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "/Users/nicholasgathof/RiderProjects/No-Kill-Louisville-Inventory-System-CapstoneF23/NoKill-Inventory/No-Kill-Inventory/No-Kill-Inventory/obj/Debug/net8.0/scopedcss/bundle/",
       "BasePath": "_content/No-Kill-Inventory",
       "RelativePath": "No-Kill-Inventory.styles.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Nic\\RiderProjects\\No-Kill-Louisville-Inventory-System-CapstoneF23\\NoKill-Inventory\\No-Kill-Inventory\\No-Kill-Inventory\\obj\\Debug\\net8.0\\scopedcss\\bundle\\No-Kill-Inventory.styles.css"
+      "OriginalItemSpec": "/Users/nicholasgathof/RiderProjects/No-Kill-Louisville-Inventory-System-CapstoneF23/NoKill-Inventory/No-Kill-Inventory/No-Kill-Inventory/obj/Debug/net8.0/scopedcss/bundle/No-Kill-Inventory.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Nic\\RiderProjects\\No-Kill-Louisville-Inventory-System-CapstoneF23\\NoKill-Inventory\\No-Kill-Inventory\\No-Kill-Inventory\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\No-Kill-Inventory.bundle.scp.css",
+      "Identity": "/Users/nicholasgathof/RiderProjects/No-Kill-Louisville-Inventory-System-CapstoneF23/NoKill-Inventory/No-Kill-Inventory/No-Kill-Inventory/obj/Debug/net8.0/scopedcss/projectbundle/No-Kill-Inventory.bundle.scp.css",
       "SourceId": "No-Kill-Inventory",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Nic\\RiderProjects\\No-Kill-Louisville-Inventory-System-CapstoneF23\\NoKill-Inventory\\No-Kill-Inventory\\No-Kill-Inventory\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "/Users/nicholasgathof/RiderProjects/No-Kill-Louisville-Inventory-System-CapstoneF23/NoKill-Inventory/No-Kill-Inventory/No-Kill-Inventory/obj/Debug/net8.0/scopedcss/projectbundle/",
       "BasePath": "_content/No-Kill-Inventory",
       "RelativePath": "No-Kill-Inventory.bundle.scp.css",
       "AssetKind": "All",
@@ -71,13 +71,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Nic\\RiderProjects\\No-Kill-Louisville-Inventory-System-CapstoneF23\\NoKill-Inventory\\No-Kill-Inventory\\No-Kill-Inventory\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\No-Kill-Inventory.bundle.scp.css"
+      "OriginalItemSpec": "/Users/nicholasgathof/RiderProjects/No-Kill-Louisville-Inventory-System-CapstoneF23/NoKill-Inventory/No-Kill-Inventory/No-Kill-Inventory/obj/Debug/net8.0/scopedcss/projectbundle/No-Kill-Inventory.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Nic\\RiderProjects\\No-Kill-Louisville-Inventory-System-CapstoneF23\\NoKill-Inventory\\No-Kill-Inventory\\No-Kill-Inventory\\wwwroot\\app.css",
+      "Identity": "/Users/nicholasgathof/RiderProjects/No-Kill-Louisville-Inventory-System-CapstoneF23/NoKill-Inventory/No-Kill-Inventory/No-Kill-Inventory/wwwroot/app.css",
       "SourceId": "No-Kill-Inventory",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Nic\\RiderProjects\\No-Kill-Louisville-Inventory-System-CapstoneF23\\NoKill-Inventory\\No-Kill-Inventory\\No-Kill-Inventory\\wwwroot\\",
+      "ContentRoot": "/Users/nicholasgathof/RiderProjects/No-Kill-Louisville-Inventory-System-CapstoneF23/NoKill-Inventory/No-Kill-Inventory/No-Kill-Inventory/wwwroot/",
       "BasePath": "_content/No-Kill-Inventory",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -90,13 +90,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\app.css"
+      "OriginalItemSpec": "wwwroot/app.css"
     },
     {
-      "Identity": "C:\\Users\\Nic\\RiderProjects\\No-Kill-Louisville-Inventory-System-CapstoneF23\\NoKill-Inventory\\No-Kill-Inventory\\No-Kill-Inventory\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "/Users/nicholasgathof/RiderProjects/No-Kill-Louisville-Inventory-System-CapstoneF23/NoKill-Inventory/No-Kill-Inventory/No-Kill-Inventory/wwwroot/bootstrap/bootstrap.min.css",
       "SourceId": "No-Kill-Inventory",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Nic\\RiderProjects\\No-Kill-Louisville-Inventory-System-CapstoneF23\\NoKill-Inventory\\No-Kill-Inventory\\No-Kill-Inventory\\wwwroot\\",
+      "ContentRoot": "/Users/nicholasgathof/RiderProjects/No-Kill-Louisville-Inventory-System-CapstoneF23/NoKill-Inventory/No-Kill-Inventory/No-Kill-Inventory/wwwroot/",
       "BasePath": "_content/No-Kill-Inventory",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -109,13 +109,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
+      "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Nic\\RiderProjects\\No-Kill-Louisville-Inventory-System-CapstoneF23\\NoKill-Inventory\\No-Kill-Inventory\\No-Kill-Inventory\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "/Users/nicholasgathof/RiderProjects/No-Kill-Louisville-Inventory-System-CapstoneF23/NoKill-Inventory/No-Kill-Inventory/No-Kill-Inventory/wwwroot/bootstrap/bootstrap.min.css.map",
       "SourceId": "No-Kill-Inventory",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Nic\\RiderProjects\\No-Kill-Louisville-Inventory-System-CapstoneF23\\NoKill-Inventory\\No-Kill-Inventory\\No-Kill-Inventory\\wwwroot\\",
+      "ContentRoot": "/Users/nicholasgathof/RiderProjects/No-Kill-Louisville-Inventory-System-CapstoneF23/NoKill-Inventory/No-Kill-Inventory/No-Kill-Inventory/wwwroot/",
       "BasePath": "_content/No-Kill-Inventory",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -128,13 +128,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
+      "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Nic\\RiderProjects\\No-Kill-Louisville-Inventory-System-CapstoneF23\\NoKill-Inventory\\No-Kill-Inventory\\No-Kill-Inventory\\wwwroot\\favicon.png",
+      "Identity": "/Users/nicholasgathof/RiderProjects/No-Kill-Louisville-Inventory-System-CapstoneF23/NoKill-Inventory/No-Kill-Inventory/No-Kill-Inventory/wwwroot/favicon.png",
       "SourceId": "No-Kill-Inventory",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Nic\\RiderProjects\\No-Kill-Louisville-Inventory-System-CapstoneF23\\NoKill-Inventory\\No-Kill-Inventory\\No-Kill-Inventory\\wwwroot\\",
+      "ContentRoot": "/Users/nicholasgathof/RiderProjects/No-Kill-Louisville-Inventory-System-CapstoneF23/NoKill-Inventory/No-Kill-Inventory/No-Kill-Inventory/wwwroot/",
       "BasePath": "_content/No-Kill-Inventory",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -147,7 +147,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.png"
+      "OriginalItemSpec": "wwwroot/favicon.png"
     }
   ]
 }
