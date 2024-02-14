@@ -3,73 +3,176 @@
 @using System.ComponentModel.DataAnnotations
 @using Humanizer
 @using Microsoft.AspNetCore.Authentication
+@using Microsoft.AspNetCore.Authorization
 @using Microsoft.AspNetCore.Identity
 @using Microsoft.EntityFrameworkCore
-@using Microsoft.Extensions.Options
-@using Microsoft.Net.Http.Headers
 @using No_Kill_Inventory.Data
 @rendermode InteractiveServer
 
+@inject IJSRuntime JSRuntime
+
 <PageTitle>Inventory Entry</PageTitle>
 
-<h1>Inventory Entry</h1>
+@attribute [Authorize]
 
-<div class="row">
-    <div class="col-md4">
-        <EditForm Model="Input" method>
-            <DataAnnotationsValidator/>
-            <h2>All fields must be filled</h2>
-            <hr/>
-            <ValidationSummary class="text-danger" role="alert"/>
-            <div class="form-floating mb-3">
-                <InputNumber @bind-Value="Input.ItemID"/>
+<AuthorizeView>
+    <Authorized>
+        <h1>Inventory Entry</h1>
+        
+        <div class="row">
+            <div class="col-md4">
+                <EditForm Model="Input" OnValidSubmit="() => HandleValidSubmit()" Context="editContext">
+                    <DataAnnotationsValidator/>
+                    <h2>All fields must be filled</h2>
+                    @if (formSubmitted)
+                    {
+                        <div class="alert alert-success" role="alert">
+                            Form successfully submitted!
+                        </div>
+                    }
+                    <hr/>
+                    <ValidationSummary class="text-danger" role="alert"/>
+                    <div class="mb-3">
+                        <label>Select Animal</label>
+                        <div class="form-floating">
+                            <InputSelect @bind-Value="Input.Animal" TValue="string">
+                                <option value="Dog">Dog</option>
+                                <option value="Cat">Cat</option>
+                                <option value="Other">Other</option>
+                            </InputSelect>
+                        </div>
+                    </div>
+
+                    @if (Input.Animal == "Other")
+                    {
+                        <div class="mb-3">
+                            <label>Other Animal:</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" @bind="OtherAnimal"/>
+                            </div>
+                        </div>
+                    }
+
+                    <div class="mb-3">
+                        <label>Prescription</label>
+                        <div class="form-floating">
+                            <InputCheckbox @bind-Value="Input.Prescription"/>
+
+                        </div>
+                    </div>
+
+                    @if (Input.Prescription)
+                    {
+                        <div class="mb-3">
+                            <label>Description</label>
+                            <div class="form-floating">
+                                <InputText @bind-Value="Input.PrescriptionDesc"/>
+                            </div>
+                        </div>
+                    }
+
+                    <div class="mb-3">
+                        <label>Dry or Wet</label>
+                        <div class="form-floating">
+                            <InputSelect @bind-Value="Input.DryWet" TValue="string">
+                                <option value="Dry">Dry</option>
+                                <option value="Wet">Wet</option>
+                            </InputSelect>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label>Age</label>
+                        <div class="form-floating">
+                            <InputSelect @bind-Value="Input.Age" TValue="string">
+                                <option value="Youth">Youth</option>
+                                <option value="Adult">Adult</option>
+                                <option value="Senior">Senior</option>
+                            </InputSelect>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label>Grain Free</label>
+                        <div class="form-floating">
+                            <InputCheckbox @bind-Value="Input.GrainFree"/>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label>Weight Control</label>
+                        <div>
+                            <InputCheckbox @bind-Value="Input.WeightCtrl"/>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label>Small Bites</label>
+                        <div class="form-floating">
+                            <InputCheckbox @bind-Value="Input.SmallBites"/>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label>Junk?</label>
+                        <InputCheckbox @bind-Value="Input.Junk"/>
+                    </div>
+                    <div class="mb-3">
+                        <label>Quantity</label>
+                        <div class="form-floating">
+                            <InputNumber @bind-Value="Input.Qty"/>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label>Food Weight (Oz.)</label>
+                        <div class="form-floating">
+                            <InputNumber @bind-Value="Input.FoodWeight"/>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </EditForm>
             </div>
-            <div>
-                <button type="button" class="btn btn-primary" @onclick="(() => { ItemStore();})">
-                    Test Input
-                </button>
-            </div>
-          
-        </EditForm>
-    </div>
-</div>
+        </div>
+    </Authorized>
+</AuthorizeView>
+
 
 @code {
     [SupplyParameterFromForm] private InputModel Input { get; set; } = new();
 
+    private bool formSubmitted = false;
+    
+    private string OtherAnimal = "";
+    
+    public async Task HandleValidSubmit()
+    {
+        ItemStore();
+        formSubmitted = true;
+        Input = new InputModel(); // Clear form fields
+        StateHasChanged();
+    }
+
+    
     public void ItemStore()
     {
         using (var context = new ApplicationDbContext(new DbContextOptions<ApplicationDbContext>()))
         {
             var newItem = new Item
             {
-                itemID = 2,
-                Brand = "Not Blue",
-                Animal = "Dog",
-                Prescription = true,
-                PrescriptionDesc = "Arthritis",
-                DryWet = "Dry",
-                Age = "Adult",
-                GrainFree = false,
-                WeightCtrl = false,
-                SmallBites = true,
-                Junk = false,
-                Qty = 14,
-                FoodWeight = 20
-                // itemID = Input.ItemID,
-                // Brand = Input.Brand,
-                // Animal = Input.Animal,
-                // Prescription = Input.Prescription,
-                // PrescriptionDesc = Input.PrescriptionDesc,
-                // DryWet = Input.DryWet,
-                // Age = Input.Age,
-                // GrainFree = Input.GrainFree,
-                // WeightCtrl = Input.WeightCtrl,
-                // SmallBites = Input.SmallBites,
-                // Junk = Input.Junk,
-                // Qty = Input.Qty,
-                // FoodWeight = Input.FoodWeight
+                Animal = Input.Animal,
+                Prescription = Input.Prescription,
+                PrescriptionDesc = Input.PrescriptionDesc,
+                DryWet = Input.DryWet,
+                Age = Input.Age,
+                GrainFree = Input.GrainFree,
+                WeightCtrl = Input.WeightCtrl,
+                SmallBites = Input.SmallBites,
+                Junk = Input.Junk,
+                Qty = Input.Qty,
+                FoodWeight = Input.FoodWeight
             };
+
+            if (Input.Animal == "Other")
+            {
+                newItem.Animal = OtherAnimal;
+            }
+            
             context.Add(newItem);
             context.SaveChanges();
         }
@@ -77,68 +180,44 @@
     
     private sealed class InputModel
     {
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be a numerical value.")]
-        [Display(Name = "ItemID")]
-        public int ItemID { get; set; } = 0;
-
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be a text value.")]
-        [Display(Name = "Brand")]
-        public string Brand { get; set; } = "";
-        
-        [Required]
+        [Required(ErrorMessage = "Please select an animal.")]
         [StringLength(100, ErrorMessage = "The {0} must be a text value.")]
         [Display(Name = "Animal")]
         public string Animal { get; set; } = "";
 
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be true or false.")]
         [Display(Name = "Prescription")]
         public bool Prescription { get; set; } = false;
-        
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be a text value.")]
+
         [Display(Name = "Prescription Description")]
         public string PrescriptionDesc { get; set; } = "";
-        
-        [Required]
+
+        [Required(ErrorMessage = "Please select dry or wet.")]
         [StringLength(100, ErrorMessage = "The {0} must be a text value.")]
         [Display(Name = "Dry or Wet")]
         public string DryWet { get; set; } = "";
-        
-        [Required]
+
+        [Required(ErrorMessage = "Please select an age group.")]
         [StringLength(100, ErrorMessage = "The {0} must be a text value.")]
         [Display(Name = "Age")]
         public string Age { get; set; } = "";
-        
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be true or false.")]
+
         [Display(Name = "Grain Free")]
         public bool GrainFree { get; set; } = false;
-        
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be true or false.")]
+
         [Display(Name = "Weight Control")]
         public bool WeightCtrl { get; set; } = false;
-        
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be true or false.")]
+
         [Display(Name = "Small Bites")]
         public bool SmallBites { get; set; } = false;
-        
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be true or false.")]
+
         [Display(Name = "Junk")]
         public bool Junk { get; set; } = false;
-        
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be a numerical value.")]
+
+        [Required(ErrorMessage = "Please enter a quantity.")]
         [Display(Name = "Quantity")]
         public int Qty { get; set; } = 0;
-        
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be a numerical value.")]
+
+        [Required(ErrorMessage = "Please enter the food weight.")]
         [Display(Name = "FoodWeight")]
         public int FoodWeight { get; set; } = 0;
     }

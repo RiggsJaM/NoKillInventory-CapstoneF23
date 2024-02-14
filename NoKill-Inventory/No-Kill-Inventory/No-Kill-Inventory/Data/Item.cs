@@ -1,11 +1,14 @@
-﻿namespace No_Kill_Inventory.Data;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace No_Kill_Inventory.Data;
 using System;
 
 public class Item
 {
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int itemID { get; set; }
-    
-    public String Brand { get; set; }
 
     public String Animal { get; set; }
     

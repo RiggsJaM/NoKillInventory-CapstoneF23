@@ -1,4 +1,6 @@
-﻿using No_Kill_Inventory.Components.Pages;
+﻿using No_Kill_Inventory.Components.Account.Pages;
+using No_Kill_Inventory.Components.Pages;
+using Bunit;
 
 namespace Testing;
 
@@ -9,16 +11,11 @@ using Bunit;
 public class ExampleTest : BunitTestContext
 {
     [TestMethod]
-    public void HelloWorldTest()
+    public void TestLoginFieldsDisplay()
     {
-        var cut = RenderComponent<HelloWorld>();
+        var cut = RenderComponent<Login>();
         
-        cut.MarkupMatches("<h3>HelloWorld</h3>");
-    }
-
-    [TestMethod]
-    public void TestLogin()
-    {
-        
+        Assert.IsTrue(cut.Markup.Contains("Username"));
+        Assert.IsTrue(cut.Markup.Contains("Password"));
     }
 }
